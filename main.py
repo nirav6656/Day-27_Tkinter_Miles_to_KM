@@ -1,16 +1,22 @@
-# This is a sample Python script.
+from tkinter import *
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+window = Tk()
+
+window.minsize(width=400,height=400)
+window.title("Hello World")
+
+label = Label(text="Hello world")
+label.pack()
 
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+def got_clicked():
+    label.config(text=input.get())
 
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
+button = Button(text="Click me", command=got_clicked)
+button.pack()
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+input = Entry(width=10)
+input.pack()
+
+window.mainloop()
