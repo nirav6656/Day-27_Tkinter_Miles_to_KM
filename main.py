@@ -52,6 +52,7 @@ radiobutton2 = Radiobutton(text="Option 2",value=2,variable=clicked_state,comman
 radiobutton1.pack()
 radiobutton2.pack()
 
+
 # Listbox
 listbox = Listbox(height=5)
 
