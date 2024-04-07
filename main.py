@@ -1,8 +1,9 @@
 from tkinter import *
+from tkinter.ttk import *
 
 window = Tk()
 
-window.minsize(width=400,height=600)
+# window.minsize(width=400,height=600)
 # window.title("Hello World")
 #
 # label = Label(text="Hello world")
@@ -63,6 +64,50 @@ window.minsize(width=400,height=600)
 # listbox.pack()
 
 # Started new project Miles to KM
+window.minsize(width=400, height=200)
+window.config(padx=50, pady=50)
 
+window.title("Miles to KM Converter")
+
+# Box lable
+
+# get_miles = IntVar()
+box_label = Entry(width=30)
+# box_label.insert(END, string="Some text")
+
+box_label.grid(column=1, row=0)
+
+# Miles label
+miles_label = Label(text="Miles")
+miles_label.grid(column=2, row=0)
+
+# is equal to label
+is_equal = Label(text="is equal to")
+is_equal.grid(column=0, row=1)
+
+# Answer in KM label
+
+answer = Label(text="0")
+answer.grid(column=1, row=1)
+
+# KM label
+km = Label(text="KM")
+km.grid(column=2, row=1)
+
+
+# Calculate Button
+# get_miles =
+# print(get_miles)
+
+
+
+def onclick():
+    print(box_label.get())
+    answer_in_km = float(box_label.get()) * 1.60934
+    answer.config(text=answer_in_km)
+
+
+button = Button(text="Calculate", command=onclick)
+button.grid(column=1, row=2)
 
 window.mainloop()
